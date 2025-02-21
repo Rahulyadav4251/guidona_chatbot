@@ -1,0 +1,235 @@
+version: "3.1"
+
+intents:
+  - start_conversation
+  - greet
+  - goodbye
+  - query_company
+  - query_leaders
+  - query_services
+  - query_service_detail
+
+  - ask_app_improvement
+  - ask_app_development
+  - provide_app_type
+
+  - ask_salestech_solutions
+  - ask_immersalearn_solutions
+  - ask_custom_development_solutions
+  - ask_enterprise_solution
+  - ask_arvr_solution
+
+  - request_demo
+  - request_consultation
+  - provide_contact_info
+  - query_appointment
+  
+  - agreement
+  - disagreement
+  - bot_challenge
+
+entities:
+  - service
+  - company
+
+
+actions:
+  - action_service_info
+
+responses:
+  utter_welcome:
+    - text: "Welcome! I am your personal guide for Guidona. Ask me anything. 🙂"
+
+# company info
+  utter_company_intro:
+    - text: |
+        Guidona Softpedia is a forward-thinking technology company specializing in innovative digital solutions that transform business operations and enhance brand engagement.
+        With a team of highly skilled professionals, we focus on leveraging cutting-edge technologies such as Artificial Intelligence (AI), Augmented Reality (AR), Virtual Reality (VR), and Automation to drive digital transformation across industries.
+
+        💡 What They Do:
+        🔹 End-to-end software developmentservices  
+        🔹 Dedicated development teamstailored to business needs  
+
+        🎯 Mission:
+        🔹 Solve business challenges  
+        🔹 Reduce repetitive tasks using tech & expertise
+
+        🌍 Vision: 
+        🔹 Equip businesses with cutting-edge tools 
+        🔹 Help them engage audiences & drive growth 
+
+        💎 Core Values: 
+        🤝 Client success| 🔍 Transparency| 🤗 Respect 
+
+  utter_leaders_info:
+    - text: |
+        Guidona Softpedia Private Limited, founded in 2018, is led by key individuals who drive its innovative solutions in technology and marketing.
+
+        The company's directors are Vibhu Chinmay and Sudhakar Mani Tripathi, both appointed on February 28, 2018.  
+        ➡️ [Company Info on Zaubacorp](https://www.zaubacorp.com/company/GUIDONA-SOFTPEDIA-PRIVATE-LIMITED/U72900DL2018PTC330148?utm_source=chatgpt.com)  
+
+        Additionally, Sini Saiman is recognized as the founder and CEO of the company.
+
+# services list responses
+  utter_service_list:
+    - text: |
+        Products and Services Offered:
+        1. Martech & Mobile Marketing Solutions
+        2. SalesTech for FMCG
+        3. ImmersaLearn - VR-Based Training Platform
+        4. Custom Development Solutions
+        5. Smart Enterprise Solutions
+        6. AR/VR Simulations
+
+# martech service responses
+  utter_service_info_martech:
+    - text: |
+        We offers a wide range of marketing technology (MarTech) services designed to enhance brands' technological capabilities and streamline business processes.
+        Our MarTech solutions include:
+        1. Gamification: Incorporating game-like elements into applications to boost user engagement and interaction.
+        2. Mobile Applications: Developing user-friendly mobile apps tailored to specific business needs, enhancing customer accessibility and experience.
+        3. Augmented Reality (AR) & Virtual Reality (VR): Creating immersive experiences that captivate audiences and provide innovative ways to interact with products or services.
+        4. Artificial Intelligence (AI): Implementing AI-driven solutions to automate tasks, analyze data, and offer intelligent insights, thereby improving decision-making processes.
+        5. Campaign Development: Designing strategic marketing campaigns aimed at increasing brand visibility and engagement across various platforms.
+        6. Mobile Marketing: Utilizing mobile platforms to effectively reach and engage target audiences, ensuring marketing efforts are aligned with current mobile usage trends.
+
+  utter_app_improvement:
+    - text: |
+        Of course!  We specialize in app development, UI/UX enhancements, performance optimization, and marketing solutions.
+        What specific improvements are you looking for?
+
+  utter_app_development:
+    - text: |
+        We offer custom app development, UI/UX design, performance optimization, and marketing solutions to make your application stand out.
+        What kind of application are you looking to develop?
+
+  utter_suggest_improvements:
+    - text: |
+        🌍 For a travel booking app, we recommend:  
+        ✅ Seamless navigation for easy browsing & booking  
+        ✅ AI-powered recommendations based on user preferences  
+        ✅ Engaging visuals & animations for a premium feel  
+        ✅ Push notifications & personalized offers to boost engagement  
+
+        Would you like a free consultation with our experts? 🚀
+
+
+# SalesTech service responses
+  utter_service_info_salestech:
+    - text: |
+        Guidona's SalesTech suite offers a comprehensive range of solutions designed to optimize various aspects of sales and distribution management. 
+        Key components include:
+        1. Distributor Management: Streamlines interactions with distributors, enhancing efficiency and communication.
+        2. Sales Incentive Automation: Automates the calculation and distribution of sales incentives, ensuring accuracy and motivation.
+        3. Scheme Management: Facilitates the creation and oversight of sales schemes and promotions, enabling effective tracking and analysis.
+        4. KYC Compliance: Ensures adherence to Know Your Customer regulations, maintaining compliance and reducing risk.
+        5. Asset Management: Manages company assets throughout their lifecycle, optimizing utilization and maintenance.
+        6. Merchandising: Enhances product presentation and placement strategies to boost sales and customer engagement.
+
+  utter_salestech_improvement:
+    - text: |
+        Looking to improve your sales process?  
+        We suggest:
+        ✅ Automating incentive tracking for accuracy  
+        ✅ AI-driven insights for better distributor management  
+        ✅ Optimizing product merchandising for higher conversions  
+        Want a tailored strategy? Lets set up a consultation!
+
+# ImmersaLearn service responses
+  utter_service_info_immersalearn:
+    - text: |
+        ImmersaLearn is an advanced immersive training platform, leveraging Augmented Reality (AR), Virtual Reality (VR), and AI-driven analytics to revolutionize traditional training methods. 
+        Key features include:
+        1. Real-Time Trainee Tracking: Continuous performance monitoring with AI-driven insights.
+        2. Scalability & Cost-Efficiency: Reduces dependency on physical resources, making training more accessible and affordable.
+        3. AI-Powered Adaptive Learning: Personalized training experiences tailored to individual progress.
+        4. Data-Driven Analytics: Tracks engagement, comprehension, and retention to optimize training outcomes.
+        5. Risk-Free Simulation: Enables practical, hands-on training without real-world consequences.
+
+  utter_immersalearn_improvement:
+    - text: |
+        Want to improve your training programs with ImmersaLearn?  
+        ✅ Enhance engagement with interactive AR/VR modules  
+        ✅ AI-powered adaptive learning for personalized training  
+        ✅ Real-time performance tracking & analytics  
+
+        Need a tailored solution? Let's discuss your needs!
+
+
+
+# coustom development enginnering service responses
+  utter_service_info_engineering:
+    - text: |
+        Guidona Softpedia offers a comprehensive suite of Engineering Services designed to meet diverse technological needs.These services are designed to enhance operational efficiency, drive innovation, and provide scalable solutions across various industries.
+        Their key offerings include:        
+        1. Mobile App Development: Crafting intuitive and robust mobile applications tailored to specific business requirements.
+        2. End-to-End Product Development: Providing complete product development services from conceptualization to deployment, ensuring seamless integration and functionality.
+        3. Software Support and Maintenance: Offering ongoing support and maintenance to ensure software systems remain efficient, secure, and up-to-date.
+        4. Assessment Portal Development: Creating customized assessment portals to facilitate efficient evaluation processes for educational institutions and corporate training programs.
+
+  utter_custom_development_improvement:
+    - text: |
+        Looking to improve your custom engineering solutions?  
+        ✅ Optimize app performance with scalable architecture  
+        ✅ Enhance user experience through intuitive UI/UX  
+        ✅ Implement AI & automation for efficiency  
+
+        Need expert guidance? Let's connect!
+
+
+# enterprise service responses
+  utter_enterprise_improvement:
+    - text: |
+        Our Smart Enterprise Solutions help businesses optimize workflows.
+        ✅ AI-powered Automation  
+        ✅ Business Intelligence & Reporting  
+        ✅ Enterprise Software Development  
+        Want to streamline your operations? Let's chat!
+
+# arvr service responses
+  utter_arvr_improvement:
+    - text: |
+        We offer AR/VR Simulations for various industries.
+        ✅ VR Training & Interactive Simulations  
+        ✅ AR-powered Customer Engagement  
+        ✅ 3D Virtual Environments  
+        Want an immersive experience? 
+
+
+# share contact responses
+  utter_request_contact:
+    - text: |
+        Fantastic! Please share your email or phone number, and our team will get in touch within 24 hours
+
+  utter_request_confermation:
+    - text: |
+        📧 Noted! You can also reach out to:
+        📩 Rajiv Kharel - rajiv@guidona.com
+        📍 Visit us at A-19, Sector-04, Noida
+
+        Anything else I can help with?
+
+  utter_appointment_detail:
+    - text: |
+        If you want to schedule a meeting with key personnel, try reaching out to:
+
+        📧 Rajiv Kharel - rajiv@guidona.com (Business Contact)  
+        📧 biz@guidona.com - Official email for business inquiries  
+
+        Or visit their office for business meetings:  
+        🏢 A-19, Sector-04, Noida, Uttar Pradesh, India
+
+  utter_alternate_service_querry:
+    - text: |
+        tell me what else can i help you with, would you like to know more about our services.
+
+
+  utter_goodbye:
+  - text: "You're welcome! Feel free to return anytime. Have a great day! 😊"
+
+  utter_iamabot:
+  - text: "I am a bot, created by Guidona."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

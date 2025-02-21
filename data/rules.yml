@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+- rule: always Welcome when user \start start conversation 
+  steps:
+  - intent: start_conversation
+  - action: utter_welcome
+
+- rule: Handle consultation request
+  steps:
+    - intent: request_consultation
+    - action: utter_request_contact
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

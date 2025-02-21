@@ -1,0 +1,106 @@
+version: "3.1"
+
+stories:
+
+- story: Greet and introduce company
+  steps:
+    - intent: greet
+    - action: utter_welcome
+    - intent: query_company
+    - action: utter_company_intro
+
+- story: User asks for services list
+  steps:
+    - intent: query_services
+    - action: utter_service_list
+
+- story: user ask for specific service Info
+  steps:
+    - intent: query_service_detail
+    - action: action_service_info
+
+# martech storys
+- story: User asks for app improvement
+  steps:
+    - intent: ask_app_improvement
+    - action: utter_app_improvement
+
+- story: User asks for app development
+  steps:
+    - intent: ask_app_development
+    - action: utter_app_development
+
+- story: User provides app type and agree on suggestions
+  steps:
+    - intent: provide_app_type
+    - action: utter_suggest_improvements
+    - intent: agreement
+    - action: utter_request_contact
+
+- story: User provides app type and disagree on suggestions
+  steps:
+    - intent: provide_app_type
+    - action: utter_suggest_improvements
+    - intent: disagreement
+    - action: utter_alternate_service_querry
+    - action: utter_service_list
+
+# salestech story
+- story: User asks for sales improvement
+  steps:
+    - intent: ask_salestech_solutions
+    - action: utter_salestech_improvement
+    - intent: request_demo
+    - action: utter_request_contact
+
+
+# ImmersaLearn story
+- story: User asks for immersalearn service improvement
+  steps:
+    - intent: ask_immersalearn_solutions
+    - action: utter_immersalearn_improvement
+
+# Custom development
+- story: User asks for custom enginnering improvement services
+  steps:
+    - intent: ask_custom_development_solutions
+    - action: utter_custom_development_improvement
+
+# Smart Enterprise Solutions
+- story: User asks for smart enterprise solution 
+  steps:
+    - intent: ask_enterprise_solution
+    - action: utter_enterprise_improvement
+
+# AR/VR Simulations
+- story: User asks for ar,vr simulations info
+  steps:
+    - intent: ask_arvr_solution
+    - action: utter_arvr_improvement
+
+# sharing contact and request appointment
+- story: User requests consultation
+  steps:
+    - intent: request_consultation
+    - action: utter_request_contact
+
+- story: User gives contact info
+  steps:
+    - action: utter_request_contact
+    - intent: provide_contact_info
+    - action: utter_request_confermation
+
+- story: User wants to schedule an appointment
+  steps:
+    - intent: query_appointment
+    - action: utter_appointment_detail
+
+- story: User asks about leaders
+  steps:
+    - intent: query_leaders
+    - action: utter_leaders_info
+
+- story: User says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye

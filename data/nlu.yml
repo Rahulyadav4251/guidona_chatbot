@@ -1,0 +1,238 @@
+version: "3.1"
+
+nlu:
+
+- intent: start_conversation
+  examples: |
+    - /start
+    - /start_new
+
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: query_company
+  examples: |
+    - what does (guidona)[company] do 
+    - what does (guidona)[company] make
+    - tell me about (guidona)[company] 
+    - (guidona)[company] moto
+
+- intent: query_leaders
+  examples: |
+    - who is the owner of guidona
+    - owner of the company
+    - ceo of the company
+    - head of the company
+    - leader of guidona
+    - owner name 
+    - tell me about the head of the company 
+    - details of the ceo
+    - intro of the ceo
+    - who is the ceo of the company
+
+# intent for company service info
+- intent: query_services
+  examples: |
+    - what are the company services
+    - what have [guidona](company) acchived so far
+    - can you tell me about the services of the company 
+    - give the service details
+    - give me service details
+    - service and product details
+    - product and services provided
+    - services Offered by the company
+    - products offered by the company
+
+
+- intent: query_service_detail
+  examples: |
+    - [SalesTech](service)
+    - what do you offer in [mobile marketing](service)
+    - tell me more about [marketing solutions](service)
+    - elaborate on the [SalesTech](service)
+    - explain more about [vr training platforms](service)
+    - [Custom Development Solutions](service)
+    - [Smart Enterprise Solutions](service)
+    - [AR/VR Simulations](service)
+    - [vr Simulations](service)
+    - detail of [ar simulations](service)
+    - Tell me more about [SalesTech](service)
+    - Explain [Smart Enterprise Solutions](service)
+    - Details of [AR/VR Simulations](service)
+    - I want info on [ImmersaLearn - VR-Based Training Platform](service)
+    - Can you elaborate on [Custom Development Solutions](service)?
+    - Provide more details about [Martech & Mobile Marketing Solutions](service)
+
+# intents looking for mobile marketing(martech) service solutions
+- intent: ask_app_improvement
+  examples: |
+    - can you help me improve my mobile applications
+    - I want my application to be more interactive
+    - improve appearance of my app
+    - develop an app that looks more interactive
+    - upscale my app traffic handling
+    - enhance user experience in my app
+
+- intent: ask_app_development
+  examples: |
+    - do you provide mobile application services?
+    - I want a marketing service for my app
+    - can you create an application for my product?
+    - build an application for a travel agency
+    - help me with a smart app designed for my company
+    - app development
+
+- intent: provide_app_type
+  examples: |
+    - It's a travel booking app
+    - My app is a shopping app
+    - It's a food delivery app
+    - I have a fitness app
+
+# intents looking for sales Management service solutions
+- intent: ask_salestech_solutions
+  examples: |
+    - can you help me improve my product distribution system
+    - help me setup an robust distribution management system 
+    - distribution management ?
+    - improve my distribution system
+    - improve my management system 
+    - help reduce distribution cost
+    - improve sales of my product 
+    - increase customer engagement
+    - increase customer retention
+    - improve customer retention
+    - improve  my tracking system 
+    - What SalesTech solutions do you offer?
+    - How can your sales automation tools help my business?
+    - I need a solution for distributor management. Can you help?
+    - Tell me more about sales incentive automation.
+
+
+
+# intents looking for ImmersaLearn service solutions
+- intent: ask_immersalearn_solutions
+  examples: |
+    - What features does ImmersaLearn offer?
+    - How does AI help in training?
+    - Can I track trainee performance in real time?
+    - Does it support hands-on simulations?
+    - Is it cost-effective?
+
+# intents looking for Custom development service solutions
+- intent: ask_custom_development_solutions
+  examples: |
+    - Do you provide software support?
+    - How can you improve my mobile app?
+    - Do you offer software optimization?
+    - Can you help with UI/UX design?
+    - Do you provide ongoing maintenance?
+
+# intents looking for Smart Enterprise service solutions
+- intent: ask_enterprise_solution
+  examples: |
+    - How can I improve my enterprise workflow?
+    - Do you offer AI-powered business insights?
+    - Can you automate my supply chain management?
+    - Do you offer smart reporting systems?
+
+# intents looking for AR/VR Simulations service solutions
+- intent: ask_arvr_solution
+  examples: |
+    - How can AR improve customer engagement?
+    - Can you create VR product demonstrations?
+    - Do you offer immersive brand experiences?
+    - Can you develop AR-powered e-commerce solutions?
+
+
+# intent create appointment
+- intent: request_demo
+  examples: |
+    - Can I get a demo of your SalesTech solutions?
+    - I would like to see how your platform works.
+    - Do you offer a free trial or a demo?
+    - I am interested in a live demonstration.
+
+- intent: request_consultation
+  examples: |
+    - Yes, i would love to discuss it further
+    - I want to book a consultation
+    - Can I talk to an expert?
+    - I need help with my app project
+    - Please contact me regarding my app
+
+- intent: provide_contact_info
+  examples: |
+    - My email is john.doe@example.com
+    - Here is my phone number: +1 234 567 890
+    - Contact me at sales@mybusiness.com
+    - Reach out to me via WhatsApp at +91 9876543210
+    
+- intent: query_appointment
+  examples: |
+    - can you make a appointment 
+    - make a appointment for me
+    - how can i contact them
+    - arrange a meeting
+    - i wanna talk to an emplayee
+    - i want to talk to employee
+    - create a appointment
+    - arrange an appointment
+
+
+
+- intent: agreement
+  examples: |
+    - yes
+    - please do
+    - sure 
+    - yes please
+    - perfect
+    - great
+
+- intent: disagreement
+  examples: |
+    - no
+    - not yet 
+    - not now 
+    - maybey later
+    - not right now 
+    - no need 
+    - i am good no thanks
+    - nope
+    - don't need
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
